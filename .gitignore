@@ -1,0 +1,19 @@
+# Abhängigkeiten und Builds
+clients/*/node_modules/
+dist/
+server/hkd*
+server/healthcheck*
+*.exe
+
+# Laufzeitdaten: Spielstände und Uploads gehören nicht ins Repository
+*.db
+*.db-*
+media/
+spielstand/
+
+# Lokales
+.env
+*.log
+__pycache__/
+.vscode/
+.idea/

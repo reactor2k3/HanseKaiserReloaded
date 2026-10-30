@@ -1,0 +1,26 @@
+# HanseKaiserReloaded als ein einziges Image (Spielserver, beide Spiele, Startseite), ohne weitere Dienste.
+#   docker compose up -d      → zieht das fertige Image von ghcr.io, Startseite unter http://<server>:8080
+# Selbst bauen statt ziehen: die Zeile „build: .“ einkommentieren und „docker compose up -d --build“.
+# Spielstände (kaiser.db, hanse.db), Ruhmeshallen und Uploads liegen im Volume „hansekaiser-data“.
+# HTTPS: Port 8080 hinter einen vorhandenen Reverse-Proxy legen (WebSockets /kaiser/ws und
+# /hanse/ws müssen durchgereicht werden).
+
+services:
+  hansekaiser:
+    image: ghcr.io/reactor2k3/hansekaiserreloaded:latest
+    # build: .
+    container_name: hansekaiserreloaded
+    hostname: hansekaiserreloaded
+    environment:
+      TZ: Europe/Berlin   # Zeitzone für Protokollzeiten (Zeitzonendaten sind ins Programm eingebaut)
+    restart: unless-stopped
+    # Grenzen (Vorgaben: 10 Spiele für Kaiser und Hanse zusammen, 6 Spieler je Spiel).
+    # Hinter eigenem Reverse-Proxy zusätzlich -trust-proxy.
+    # command: ["-max-games", "10", "-max-players", "6"]
+    ports:
+      - "8080:8080"
+    volumes:
+      - hansekaiser-data:/var/lib/hansekaiser
+
+volumes:
+  hansekaiser-data:

@@ -1,0 +1,10 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="494" width="426" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs></defs>
+ 
+ <g transform="translate(0,22)">
+  <path stroke-linejoin="miter" d="m3-15.502,414,0-9,288c-4.5,117-99,193.5-198,193.5s-191.4-75.32-198-193.5z" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="5.99998617" fill="#fcdd09"/>
+  <path stroke-linejoin="miter" d="m210,47.498-58.5,112.5,117,0z" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="34.20006561" fill="none"/>
+  <path d="m102,214,216,0,18,36-252,0z" fill="#000"/>
+  <path d="m66,286,288,0,18,36-324,0z" fill="#000"/>
+ </g>
+</svg>

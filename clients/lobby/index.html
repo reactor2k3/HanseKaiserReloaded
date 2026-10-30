@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HanseKaiserReloaded</title>
+  <meta name="description" content="Zwei C64-Klassiker neu im Browser: Kaiser und Hanse, für bis zu sechs Spieler.">
+  <link rel="icon" href="/kaiser/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="lobby.css">
+  <script type="module" src="lobby.js"></script>
+</head>
+<body>
+  <!-- Gemeinsame Startseite: Spielauswahl, laufende Spiele beider Spielarten, Ruhmeshallen.
+       Die Spiele selbst laufen unter /kaiser/ und /hanse/ mit eigener Lobby (Anlegen, Beitreten). -->
+  <noscript><p class="noscript">HanseKaiserReloaded braucht JavaScript. Bitte aktivieren Sie es in Ihrem Browser.</p></noscript>
+  <header class="kopf">
+    <h1 class="display">HanseKaiserReloaded</h1>
+    <p class="unter">Zwei Klassiker vom C64, neu für den Browser, für bis zu sechs Spieler.</p>
+  </header>
+
+  <main>
+    <section class="wahl" aria-label="Spiel wählen">
+      <a class="karte kaiser" href="/kaiser/">
+        <img src="/kaiser/icon-192.png" alt="" width="96" height="96">
+        <span class="display titel">Kaiser</span>
+        <span class="text">Regieren Sie ein Fürstentum im 18. Jahrhundert: Korn, Land, Steuern, Bauten und Heere, bis zur Kaiserkrone.</span>
+        <span class="knopf">Kaiser spielen</span>
+      </a>
+      <a class="karte hanse" href="/hanse/">
+        <img src="/hanse/icon-192.png" alt="" width="96" height="96">
+        <span class="display titel">Hanse</span>
+        <span class="text">Führen Sie ein Lübecker Handelshaus im 14. Jahrhundert: Salz, Koggen, Kontore und Fehden, bis in den Senat.</span>
+        <span class="knopf">Hanse spielen</span>
+      </a>
+    </section>
+
+    <section class="block" aria-labelledby="spiele-titel">
+      <h2 id="spiele-titel" class="display">Laufende Spiele</h2>
+      <p id="spiele-grenze" class="hinweis"></p>
+      <ul id="spiele" class="liste"></ul>
+    </section>
+
+    <section class="block" aria-labelledby="halle-titel">
+      <h2 id="halle-titel" class="display">Ruhmeshalle</h2>
+      <div class="hallen">
+        <div><h3>Kaiser</h3><ol id="halle-kaiser" class="liste"></ol></div>
+        <div><h3>Hanse</h3><ol id="halle-hanse" class="liste"></ol></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fuss">
+    <p>Nachbau zu Lern- und Erinnerungszwecken. Kaiser und Hanse sind Spiele ihrer ursprünglichen Urheber; Bildnachweise in der Hilfe des jeweiligen Spiels.</p>
+  </footer>
+</body>
+</html>

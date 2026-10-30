@@ -1,0 +1,8 @@
+# Nicht in den Build-Kontext: lokale Abhängigkeiten, Builds, Spielstände und Uploads
+clients/*/node_modules
+dist
+server/hkd*
+**/*.db*
+**/media
+**/*.log
+.git
