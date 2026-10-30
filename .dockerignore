@@ -3,6 +3,7 @@ clients/*/node_modules
 dist
 server/hkd*
 **/*.db*
-**/media
+media
+spielstand
 **/*.log
 .git
