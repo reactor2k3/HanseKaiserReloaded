@@ -8,7 +8,8 @@ server/healthcheck*
 # Laufzeitdaten: Spielstände und Uploads gehören nicht ins Repository
 *.db
 *.db-*
-media/
+/media/
+/spielstand/media/
 spielstand/
 
 # Lokales
